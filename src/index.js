@@ -1,8 +1,13 @@
-import './index.css';
+'use strict';
+import 'babel-polyfill';
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, browserHistory } from 'react-router';
+import routes from './routes';
+import './assets/css/index.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import numeral from 'numeral';
-
-const value = numeral(1000).format('0.00,00');
-
-/* eslint-disable no-console */
-console.log(value);
+render(
+  <Router history={browserHistory} routes={routes} />,
+  document.getElementById('root')
+);

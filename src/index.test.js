@@ -9,7 +9,7 @@ describe('First test', () => {
   });
 });
 
-describe('index.html', () => {
+/*describe('index.html', () => {
   it('should say Hello World', (done) => {
     const index = fs.readFileSync('./src/index.html', 'utf-8');
     jsdom.env(index, function(err, window){
@@ -19,5 +19,5 @@ describe('index.html', () => {
       window.close();
     });
   });
-});
+});*/
 

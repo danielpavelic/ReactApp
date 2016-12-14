@@ -44,6 +44,12 @@ export default {
       },
       inject: true
     }),
+    // React Production
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     // Remove duplicate packages in bundle
     new webpack.optimize.DedupePlugin(),
     // Minify JS
@@ -51,8 +57,12 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loader: extractTextPlugin.extract('css?sourceMap')}
+      {test: /\.css$/, loader: extractTextPlugin.extract('css?sourceMap')},
+      {test: /\.js$/, include: path.join(__dirname, 'src'), exclude: /node_modules/, loaders: ['babel']},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?mimetype=application/vnd.ms-fontobject'},
+      {test: /\.(woff|woff2)$/, loader: 'url-loader?mimetype=application/font-woff'},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?mimetype=application/x-font-ttf'},
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?mimetype=image/svg+xml'}
     ]
   }
-}
+};
