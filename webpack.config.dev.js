@@ -25,6 +25,7 @@ export default {
     loaders: [
       {test: /\.js$/, include: path.join(__dirname, 'src'), exclude: /node_modules/, loaders: ['babel']},
       {test: /(\.css)$/, loaders: ['style', 'css']},
+      //{test: /(\.less)$/, loaders: ['style', 'css', 'less']},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?mimetype=application/vnd.ms-fontobject'},
       {test: /\.(woff|woff2)$/, loader: 'url-loader?mimetype=application/font-woff'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?mimetype=application/x-font-ttf'},

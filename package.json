@@ -65,6 +65,8 @@
     "express": "4.14.0",
     "html-webpack-plugin": "2.24.1",
     "jsdom": "9.8.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "localtunnel": "1.8.2",
     "mocha": "3.2.0",
     "nock": "9.0.2",

@@ -10,7 +10,7 @@ class Header extends React.Component {
         <nav>
           <ul>
             <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-            <li><Link to="/page" activeClassName="active">Page</Link></li>
+            <li><Link to="/single-page" activeClassName="active">Page</Link></li>
           </ul>
         </nav>
       </div>

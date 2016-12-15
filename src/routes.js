@@ -8,6 +8,6 @@ import Page from './components/common/Page';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    <Route path="page" component={Page} />
+    <Route path="single-page" component={Page} />
   </Route>
 );
